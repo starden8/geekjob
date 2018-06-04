@@ -1,0 +1,8 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+long answer = 1;
+for(long i =0;i<20; i++){
+    answer = answer*8;
+}
+out.print("8‚Ì20æ‚Í" + answer + "‚Å‚·B");
+%>
