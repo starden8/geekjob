@@ -1,0 +1,8 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+   float num = 1000;
+while (num > 100 ) {
+    num = num / 2;
+}
+out.print(num);
+%>
