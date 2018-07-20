@@ -1,0 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lesson;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+class Lesson4 {
+    public static void main(String[] args) {
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2015,01,01,0,0,0);
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2015,12,31,23,59,59);
+    long dif = c2.getTimeInMillis() - c1.getTimeInMillis();
+    System.out.print(dif + "ïbÇÃç∑Ç≈Ç∑");
+    }
+}
+
