@@ -1,0 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lesson;
+
+/**
+ *
+ * @author guest1Day
+ */
+public class lesson6 {
+    public static void main(String[] args){
+        String mail="kle@i.softbank.jp";
+        System.out.print(mail.substring(3));
+    
+    }
+    
+    
+}
+
