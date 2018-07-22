@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lesson;
+
+import java.io.*;
+
+/**
+ *
+ * @author guest1Day
+ */
+public class lesson9 {
+    public static void main(String[] arg) throws IOException{
+    File pr = new File("testtxt");
+    FileWriter fw = new FileWriter(pr);
+    fw.write("私の名前は酒井悠有です。好きな果物は桃です。");
+    fw.close();
+    
+    FileReader fr = new FileReader(pr);
+    BufferedReader br = new BufferedReader(fr);
+    System.out.print(br.readLine());
+
+    br.close();
+    }
+}
+    
+
