@@ -1,0 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lesson;
+
+/**
+ *
+ * @author guest1Day
+ */
+public class lesson7 {
+    public static void main(String[] args){
+        String word1 = "‚«‚åU‚Í‚ÒI‚¦I‚¿‚ÒI‚Ì‚­‚Ý‚±‚Ý‚©‚ñ‚·U‚Ì‚ª‚­‚µ‚ãU‚ð‚µ‚ÄI‚Ü‚·";
+        String word2 = word1.replace("U","‚¤");
+        String word3 = word2.replace("I","‚¢");
+        System.out.print(word3);
+    }
+}
