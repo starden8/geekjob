@@ -1,0 +1,14 @@
+<%-- 
+    Document   : newjsp
+    Created on : 2018/06/11, 13:41:54
+    Author     : guest1Day
+--%>
+
+<html>
+<%
+    request.setCharacterEncoding("UFT-8");
+    out.print(request.getParameter("txtName"));
+    out.print(request.getParameter("rdoSample"));
+    out.print(request.getParameter("mulText"));
+%>
+</html>
