@@ -1,0 +1,87 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author guest1Day
+ */
+public class NewClass {
+  
+public static void main(String args[]){
+    
+     User use = new User();
+     Dealer dea = new Dealer();
+ // ここからDealer処理
+    dea.setCard(dea.deal());
+    System.out.println("最初の手札の合計は" + dea.open() + "です。");
+    
+    while(dea.cheakSum()){
+        dea.setCard(dea.hit());
+        System.out.println("山札から1枚引きました。");
+    }
+    if(dea.open() == 21){
+        System.out.println("手札" + dea.mycards);
+        System.out.println("ブラックジャック!!");
+    }else if(dea.open() > 21){
+        System.out.println("手札" + dea.mycards);
+        System.out.println("バースト!!" + " 合計値は" + dea.open() + "でした。");
+    }else{
+        System.out.println("手札" + dea.mycards);
+        System.out.println("手札の合計値は " + dea.open() + " です。");
+    }
+     System.out.println();
+     System.out.println("↑Dealer || User↓");
+     System.out.println();
+     //ここからUser処理
+
+     
+     use.setCard(dea.deal());
+     System.out.println("最初の手札の合計は" + use.open() + "です。");
+     
+      while(use.cheakSum()){
+        use.setCard(dea.hit());
+        System.out.println("山札から1枚引きました。");
+        
+    }
+    if(use.open() == 21){
+        System.out.println("手札" + use.mycards);
+        System.out.println("ブラックジャック!!");
+    }else if(use.open() > 21){
+        System.out.println("手札" + use.mycards);
+        System.out.println("バースト!!" + " 合計値は" + use.open() + "でした。");
+    }else{
+        System.out.println("手札" + use.mycards);
+        System.out.println("手札の合計値は " + use.open() + " です。");
+    }
+     System.out.println();
+
+     
+     int id = dea.open();
+     int iu = use.open();
+
+   // 勝負の処理
+     if(id > 21 && iu >21){
+             System.out.println("お互いバーストの為、引き分けです。");
+             
+         }else if(id > 21 || iu > 21){
+             if(id >21 ){
+                 System.out.println("Userの勝利です。");
+             }
+             if(iu >21){
+                 System.out.println("Dealerの勝利です。");
+             }
+         }else if(id > iu){
+          System.out.println("Dealerの勝利");
+         }else if(id<iu){
+             System.out.println("Userの勝利");
+         }else{
+             System.out.println("引き分けです。");
+         }
+     
+
+}
+         
+}
